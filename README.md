@@ -40,3 +40,13 @@ possible separation mechanisms:
  * iFrames
  * web components
  * custom events/ dom/ namespacing!
+
+## Why didn't I recommend waitrose moved to a micro-frontend?
+
+What problem were they trying to solve? Mostly it was about teams being able to work independently. However they were not doing full vertical features for a variety of reasons.
+
+1. was that the backend was creating an api surface for multiple existing clients as well as trying to think about making these apis public and usable by potentially anyone. They had to work and make sense in complete isolation from any client/ front end. Therefore there was a strong desire to run backend/ api stories separate from the frontends. We would of course collaborate deeply when designing the APIs/ user journey flows and stories. But they would be collaborating with the web frontenders as *well* as the mobile teams as *well* as other api teams which were also consumers of course.
+
+This meant that stories made sense to be created at the API level. And subsequently (or in parallel) a set of frontend stories would be created.
+
+This means that 
